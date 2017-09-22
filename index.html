@@ -15,24 +15,28 @@
     				document.getElementById("degrees").innerHTML = Math.round(degrees) + "&deg;";
     				document.getElementById("weatherInfo").innerHTML = current.conditions();
     				// depending on the weather, adjust background.
-					if (current.conditions().includes("sun"))
+					if (current.conditions().includes("sun") || current.conditions().includes("clear"))
 					{
-						document.body.background = "sunnyWallpaper.jpg";
+						document.body.style.backgroundImage = "url('sunnyWallpaper.jpg')";
 					}
 					else if (current.conditions().includes("cloud"))
 					{
+						document.body.style.backgroundImage = "url('cloudyWallpaper.jpg')";
 						document.body.background = "cloudyWallpaper.jpg";
 					}
 					else if (current.conditions().includes("rain"))
 					{
+						document.body.style.backgroundImage = "url('rainyWallpaper.jpg')";
 						document.body.background = "rainyWallpaper.jpg";
 					}
 					else if (current.conditions().includes("snow"))
 					{
+						document.body.style.backgroundImage = "url('snowyWallpaper.jpg')";
 						document.body.background = "snowyWallpaper.jpg";
 					}
 					else
 					{
+						document.body.style.backgroundImage = "url('blurredBG.jpg')";
 						document.body.background = "blurredBG.jpg";
 					}
 				});
