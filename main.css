@@ -3,6 +3,7 @@ body {
 	background-color:#506F9B;
 	background-image:url("blurredBG.jpg");
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 .center {
