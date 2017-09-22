@@ -24,6 +24,10 @@ h2 {
 	line-height:0.1;
 }
 
+#cityBoxDiv {
+	background-color:transparent;
+}
+
 div {
 	/*padding: 20px;*/
 	/*background-image: url('');*/
