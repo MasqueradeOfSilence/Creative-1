@@ -5,7 +5,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One" rel="stylesheet">
 	
 	<script>
-		
+		var updateWeather = function () {
+			var city = document.getElementById("cityBox").value;
+				Weather.getCurrent(city, function(current) {
+  					console.log(
+    				["currently:",Weather.kelvinToFahrenheit(current.temperature()),"and",current.conditions()].join(" "));
+    				
+    				var degrees = Weather.kelvinToFahrenheit(current.temperature());
+    				document.getElementById("degrees").innerHTML = Math.round(degrees) + "&deg;";
+    				document.getElementById("weatherInfo").innerHTML = current.conditions();
+				});
+			}
 	</script>
 </head>
 <body>
@@ -17,7 +27,7 @@
 	<br><br><br>
 	<div class="center" id="cityBoxDiv">
 		<input type="text" id="cityBox" placeholder="city, state">
-		<button type="button" onClick="">Submit</button>
+		<button type="button" onClick="updateWeather()">Submit</button>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
