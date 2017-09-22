@@ -19,25 +19,21 @@
 					{
 						document.body.style.backgroundImage = "url('sunnyWallpaper.jpg')";
 					}
-					else if (current.conditions().includes("cloud"))
+					else if (current.conditions().includes("cloud") || current.conditions().includes("fog"))
 					{
 						document.body.style.backgroundImage = "url('cloud3Wallpaper.jpg')";
-						document.body.background = "cloudyWallpaper.jpg";
 					}
-					else if (current.conditions().includes("rain"))
+					else if (current.conditions().includes("rain") || current.conditions().includes("shower"))
 					{
 						document.body.style.backgroundImage = "url('ravenrainWallpaper.jpg')";
-						document.body.background = "ravenrainWallpaper.jpg";
 					}
 					else if (current.conditions().includes("snow"))
 					{
-						document.body.style.backgroundImage = "url('snowyWallpaper.jpg')";
-						document.body.background = "snowyWallpaper.jpg";
+						document.body.style.backgroundImage = "url('snowWallpaper.jpg')";
 					}
 					else
 					{
 						document.body.style.backgroundImage = "url('blurredBG.jpg')";
-						document.body.background = "blurredBG.jpg";
 					}
 				});
 			}
