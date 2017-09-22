@@ -16,10 +16,9 @@
 
 	<br><br><br>
 	<div class="center" id="cityBoxDiv">
-		<input type="text" id="cityBox">
+		<input type="text" id="cityBox" placeholder="city, state">
+		<button type="button" onClick="">Submit</button>
 	</div>
-	
-	<input type="button" onClick=
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="weather-master/lib/weather.js"></script>
@@ -43,7 +42,7 @@
                 Weather.kelvinToCelsius( forecast.low() ) + "&deg;C" );
         });*/
         
-        Weather.getCurrent("Provo, UT", function(current) {
+        Weather.getCurrent("provo, utah", function(current) {
   console.log(
     ["currently:",Weather.kelvinToFahrenheit(current.temperature()),"and",current.conditions()].join(" ")
   );
